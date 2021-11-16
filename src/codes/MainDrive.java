@@ -19,7 +19,7 @@ public class MainDrive {
 //		}
 //		System.out.println("앱이 안죽어야 나오는 코드");
 //
-//	}
+	}
 
 	static void writeToFile() {
 //		파일 저장 (output) 실습
@@ -32,13 +32,16 @@ public class MainDrive {
 		try {
 			
 //			한 글자를 2byte씩 다루게 되어있음 -> 한번에 한 글자씩만 처리 함
-			FileWriter fw = new FileWriter(myFile);
+			FileWriter fw = new FileWriter(myFile,true);
 			
 //			문장을 통재로 다루게 도와주는 Class
 			BufferedWriter bw = new BufferedWriter(fw);
 			
 //			실제 문장 기록: bw를 이용
-			bw.append("안녕하세요");
+			bw.append("수고하셨습니다.");
+			
+//			다음줄로 내려주자
+			bw.newLine();
 			
 //			파일을 다 쓰면 닫아주자 (다른곳에서도 사용 가능하게)
 			bw.close();
