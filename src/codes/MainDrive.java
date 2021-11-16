@@ -5,12 +5,25 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class MainDrive {
 	public static void main(String[] args) {
 
 //	writeToFile();
-		readFile();
+//		readFile();
+		
+		
+		Scanner myScanner = new Scanner(System.in);
+		System.out.println("파일에 저장 할 문구");
+		String inputStr = myScanner.nextLine();
+		writeToFile(inputStr);
+		
+	}
+		
+		Static void writeToFile(String content) {
+			
+		}
 		
 		
 		static void readFile() {
@@ -42,8 +55,8 @@ public class MainDrive {
 			BufferedReader br = new BufferedReader(fr);
 		
 //			파일을 다 쓰면 닫아주자 (다른곳에서도 사용 가능하게)
-			bw.close();
-			fw.close();
+			br.close();
+			fr.close();
 			
 		}
 		
