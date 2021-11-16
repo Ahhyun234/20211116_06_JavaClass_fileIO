@@ -41,7 +41,10 @@ public class MainDrive {
 			
 			BufferedReader br = new BufferedReader(fr);
 		
-		
+//			파일을 다 쓰면 닫아주자 (다른곳에서도 사용 가능하게)
+			bw.close();
+			fw.close();
+			
 		}
 		
 		
