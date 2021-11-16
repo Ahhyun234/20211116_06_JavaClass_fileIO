@@ -1,5 +1,6 @@
 package codes;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -8,7 +9,43 @@ import java.io.IOException;
 public class MainDrive {
 	public static void main(String[] args) {
 
-	writeToFile();
+//	writeToFile();
+		readFile();
+		
+		
+		static void readFile() {
+//			파일 load 하기 (input)
+//			1. 어디서 파일을 불러 올 것인지 경로 설정을 해야 함
+			Filw myFile = new File("mytest.txt");
+//			2. 파일 불러내기 클래스 활용 -> 파일이 지워져 있으면? 예외 대응 try catch 필요
+			
+			
+		
+			
+			
+			FileReader fr = new Filereader(myFile);
+		
+		
+//		여러 글자를 뭉쳐서 String으로 읽어오게 하는 클래스 => 한번에 한 줄씩 반복 
+		
+//		불명확한 반복이기 때문에 while 사용 / io 추가 대비 필요
+			String line = br.readLine();
+			
+			if(line==null) {
+//				더이상 읽을 게 없음
+				System.out.println("끝까지 읽음");
+				break;
+			}
+			System.out.println(line);
+			
+			
+			BufferedReader br = new BufferedReader(fr);
+		
+		
+		}
+		
+		
+		
 
 //		try {
 //			for (int i = 0; i < 5; i++) {
